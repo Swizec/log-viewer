@@ -1,0 +1,122 @@
+15:53:14.409 [INFO ] Copying the repository's data: RepositoryEntry{id=9dd45702-6fa8-11e8-99db-fa163e67f194, projectId=76bade28-2ce8-11e8-bb6e-fa163ee88118, name='non-root-uf', url='https://gecgithub01.walmart.com/ms-tf-logsearch/mls-splunk-uf.git', branch='master', commitId='null', path='null', secretId=28c1842a-67c0-11e8-94f9-fa163e67f194, secretName='mls-uf-pass_1', hasWebHook=true, secretStoreType=null}
+15:53:15.719 [INFO ] Storing policy 'concord-system' data
+15:53:15.768 [INFO ] Using entry point: default
+15:53:16.449 [INFO ] Applying policies...
+15:53:19.026 [INFO ] Acquired by: Concord-Agent: id=2fe38959-6d20-56a7-8e49-2bfbbc206741 (10.227.246.95)
+15:53:20.609 [INFO ] Process status: RUNNING
+Agent ID: 2fe38959-6d20-56a7-8e49-2bfbbc206741
+15:53:20.399 [INFO ] Checking the dependency policy
+Dependencies: 
+    mvn://com.walmartlabs.concord.plugins.basic:concord-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:slack-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:http-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:ansible-tasks:0.73.0
+    mvn://com.walmartlabs.concord.plugins:oneops-tasks:0.38.0
+    mvn://org.codehaus.groovy:groovy-all:2.4.12
+    mvn://org.python:jython-standalone:2.7.1
+15:52:34.668 [INFO ] c.walmartlabs.concord.common.IOUtils - Using /tmp/concord as TMP
+15:52:34.688 [INFO ] c.w.concord.runner.ApiClientProvider - Using the API address: https://concord.prod.walmart.com
+15:52:34.735 [INFO ] com.walmartlabs.concord.runner.Main - run -> working directory: /tmp/concord/prefork5922007485562481227/payload
+15:53:20.635 [INFO ] c.w.concord.runner.ProcessHeartbeat - start ['d62e5717-deac-460b-8b41-5611f7084478'] -> running every 10000ms
+15:53:21.503 [INFO ] c.w.concord.plugins.log.LoggingTask - Done!
+Process finished with: 0
+15:53:22.637 [INFO ] Process status: SUSPENDED
+15:53:26.167 [INFO ] Acquired by: Concord-Agent: id=ebc293b8-b7a6-5243-8cd8-43f5d53b32d6 (10.227.177.129)
+15:53:27.777 [INFO ] Process status: RUNNING
+Agent ID: ebc293b8-b7a6-5243-8cd8-43f5d53b32d6
+15:53:27.571 [INFO ] Checking the dependency policy
+Dependencies: 
+    mvn://com.walmartlabs.concord.plugins.basic:concord-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:slack-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:http-tasks:0.78.1
+    mvn://com.walmartlabs.concord.plugins.basic:ansible-tasks:0.73.0
+    mvn://com.walmartlabs.concord.plugins:oneops-tasks:0.38.0
+    mvn://org.codehaus.groovy:groovy-all:2.4.12
+    mvn://org.python:jython-standalone:2.7.1
+15:52:42.254 [INFO ] c.walmartlabs.concord.common.IOUtils - Using /tmp/concord as TMP
+15:52:42.280 [INFO ] c.w.concord.runner.ApiClientProvider - Using the API address: https://concord.prod.walmart.com
+15:52:42.339 [INFO ] com.walmartlabs.concord.runner.Main - run -> working directory: /tmp/concord/prefork2927482960680256606/payload
+15:53:27.805 [INFO ] c.w.concord.runner.ProcessHeartbeat - start ['d62e5717-deac-460b-8b41-5611f7084478'] -> running every 10000ms
+15:53:39.198 [INFO ] c.w.c.plugins.slack.SlackClient - message ['mls_concord_deploy', '{as_user=true, channel=mls_concord_deploy, text=On-boarding task initiated for, Organization:bogrccc, Assembly:FSPT, Platform:MasterData}'] -> Response{ok=true, error='null'}
+15:53:39.199 [INFO ] c.w.concord.plugins.slack.SlackTask - Slack message sent into 'mls_concord_deploy' channel
+15:53:39.227 [INFO ] c.w.c.p.oneops.OneOpsClientTask - Getting IPs of FSPT/stg/MasterData/compute...
+15:53:40.693 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - Using a playbook: roles/Nonroot_splunk/tasks/install_nonroot.yml
+15:53:40.696 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - Using an inline inventory
+15:53:40.713 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - Using the private key: .tmp/private7201195688067236220.key
+15:53:42.278 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: Log filter is enabled...
+15:53:42.278 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: Ansible event recording started...
+15:53:42.278 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: 
+15:53:42.278 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: PLAY [all] *********************************************************************
+15:53:42.292 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: play strategy 'concord_linear'
+15:53:42.293 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: Loading policy from /tmp/concord/prefork2927482960680256606/payload/.concord/policy.json
+15:53:42.293 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Gathering Facts ] *************************************************************************
+15:53:43.075 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.133.177]
+15:53:43.138 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.129.167]
+15:53:43.413 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.68.65]
+15:53:43.442 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.74.166]
+15:53:43.467 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ include_vars ] *************************************************************************
+15:53:43.573 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE:  [WARNING]: While constructing a mapping from /tmp/concord/prefork2927482960680
+15:53:43.573 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: 256606/payload/roles/Nonroot_splunk/tasks/../../../vars/conf/oneops/bogrccc/FSP
+15:53:43.573 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: T/MasterData/stg/settings.yml, line 1, column 1, found a duplicate dict key
+15:53:43.573 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: (date). Using last defined value only.
+15:53:43.585 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.68.65]
+15:53:43.587 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE:  [WARNING]: While constructing a mapping from /tmp/concord/prefork2927482960680
+15:53:43.587 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: 256606/payload/roles/Nonroot_splunk/tasks/../../../vars/conf/oneops/bogrccc/FSP
+15:53:43.587 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: T/MasterData/stg/settings.yml, line 1, column 1, found a duplicate dict key
+15:53:43.587 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: (date). Using last defined value only.
+15:53:43.599 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.74.166]
+15:53:43.622 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE:  [WARNING]: While constructing a mapping from /tmp/concord/prefork2927482960680
+15:53:43.622 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: 256606/payload/roles/Nonroot_splunk/tasks/../../../vars/conf/oneops/bogrccc/FSP
+15:53:43.622 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: T/MasterData/stg/settings.yml, line 1, column 1, found a duplicate dict key
+15:53:43.622 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: (date). Using last defined value only.
+15:53:43.623 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE:  [WARNING]: While constructing a mapping from /tmp/concord/prefork2927482960680
+15:53:43.624 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: 256606/payload/roles/Nonroot_splunk/tasks/../../../vars/conf/oneops/bogrccc/FSP
+15:53:43.624 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: T/MasterData/stg/settings.yml, line 1, column 1, found a duplicate dict key
+15:53:43.624 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: (date). Using last defined value only.
+15:53:43.628 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.129.167]
+15:53:43.643 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.133.177]
+15:53:43.664 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Check if the user is already there ] *************************************************************************
+15:53:44.078 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.133.177]
+15:53:44.090 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.129.167]
+15:53:44.171 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.68.65]
+15:53:44.189 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.74.166]
+15:53:44.208 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Remove old splunk forwarder if present ] *************************************************************************
+15:53:44.245 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.68.65]
+15:53:44.262 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.74.166]
+15:53:44.263 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.133.177]
+15:53:44.283 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.129.167]
+15:53:44.292 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Check if UF is already running ] *************************************************************************
+15:53:44.571 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.133.177]
+15:53:44.591 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.38.129.167]
+15:53:44.640 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.68.65]
+15:53:44.654 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.74.166]
+15:53:44.678 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Create "app" group ] *************************************************************************
+15:53:44.708 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.68.65]
+15:53:44.729 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.74.166]
+15:53:44.729 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.133.177]
+15:53:44.737 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.129.167]
+15:53:44.751 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Create 'splunkuser' service user ] *************************************************************************
+15:53:44.772 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.68.65]
+15:53:44.807 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.118.74.166]
+15:53:44.811 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.133.177]
+15:53:44.822 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: skipping: [10.38.129.167]
+15:53:44.836 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Add "splunkuser" to "app" group ] *************************************************************************
+15:53:45.110 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: changed: [10.38.133.177]
+15:53:45.165 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: changed: [10.38.129.167]
+15:53:45.178 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: changed: [10.118.68.65]
+15:53:45.202 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: changed: [10.118.74.166]
+15:53:45.218 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: TASK [ Download splunk archive ] *************************************************************************
+15:53:46.915 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using 
+15:53:46.915 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: `result|success` instead use `result is success`. This feature will be removed 
+15:53:46.915 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: in version 2.9. Deprecation warnings can be disabled by setting 
+15:53:46.915 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: deprecation_warnings=False in ansible.cfg.
+15:53:46.921 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.68.65]
+15:53:47.055 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using 
+15:53:47.055 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: `result|success` instead use `result is success`. This feature will be removed 
+15:53:47.055 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: in version 2.9. Deprecation warnings can be disabled by setting 
+15:53:47.055 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: deprecation_warnings=False in ansible.cfg.
+15:53:47.060 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: ok: [10.118.74.166]
+15:53:47.233 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: [DEPRECATION WARNING]: Using tests as filters is deprecated. Instead of using 
+15:53:47.233 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: `result|success` instead use `result is success`. This feature will be removed 
+15:53:47.233 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: in version 2.9. Deprecation warnings can be disabled by setting 
+15:53:47.233 [INFO ] c.w.c.p.ansible.RunPlaybookTask2 - ANSIBLE: deprecation_warnings=False in ansible.cfg.
