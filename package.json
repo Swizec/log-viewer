@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "downshift": "^2.0.16",
-    "match-sorter": "^2.2.3"
+    "match-sorter": "^2.2.3",
+    "styled-components": "^3.3.3"
   },
   "peerDependencies": {
     "react": "16.x"
